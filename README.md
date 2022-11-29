@@ -1,6 +1,6 @@
 # About
 - A React App with functionality to analyze texts. It helps in coverting the text to uppercase, lowercase and copy. 
-- **ERROR**: There was some github problem while uploading my files, so the files in the repository may not be the ones i used or they might just be the default ones, to host this website i manually deployed it on netify domain.
+- **ERROR**: The netlify domain isnt working as its supposed to be, so ive added gif of the website on local host.
 
 # Demo
 
