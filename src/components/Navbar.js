@@ -25,7 +25,7 @@ export default function Navbar(props) {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <Link className="nav-link" to="/">
+            <Link className="nav-link" to="/home">
               Home 
             </Link>
           </li>
@@ -35,29 +35,12 @@ export default function Navbar(props) {
             </Link>
           </li>
         </ul>
-        {/* <form className="form-inline my-2 my-lg-0">
-          <input
-            className="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button
-            className="btn btn-outline-success my-2 my-sm-0"
-            type="submit"
-          >
-            Search
-          </button>
-        </form> */}
-
-        {/* the toggle function */}
+        
         <div
           className={`form-check form-switch mx-5 text-${
-            // checking the condition
             props.mode === "light" ? "dark" : "light"
           }`}
         >
-          {/* the method this gonna call */}
           <input
             onClick={props.toggleMode}
             className="form-check-input"
@@ -66,7 +49,6 @@ export default function Navbar(props) {
           />
           <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
             {
-            // checking the condition
             props.mode === "light" ? "Enable Dark" : "Disable Dark"
           } Mode
           </label>

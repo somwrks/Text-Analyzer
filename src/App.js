@@ -7,7 +7,7 @@ import Alert from "./components/Alert";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [mode, setMode] = useState("light"); //Whether dark mode is enabled or not
+  const [mode, setMode] = useState("light"); 
   const [alert, setAlert] = useState(null);
   const showAlert = (message, type) => {
     setAlert({
@@ -24,19 +24,10 @@ function App() {
       setMode("dark");
       document.body.style.backgroundColor = "#212121";
       showAlert("Dark mode has been enabled", "success");
-      // document.title = "TextUtils - Dark Mode";
-
-      // setInterval(() => {
-      //   document.title= "TextUtils is Amazing "
-      // }, 2000);
-      // setInterval(() => {
-      //   document.title= "iNSTALL TextUtils is Amazing "
-      // }, 1000);
     } else {
       setMode("light");
       document.body.style.backgroundColor = "white";
       showAlert("Light mode has been enabled", "success");
-      // document.title = "TextUtils - Light Mode";
     }
   };
   return (
@@ -51,9 +42,6 @@ function App() {
         <div className="container my-3">
           <Alert alert={alert} />
           <Routes>
-            {/* /users --> Componenet 1
-                /users/home --> Component 2 */}
-            <Route exact path="/about" element={<About mode={mode} />} />
             <Route
               exact
               path="/"
@@ -65,6 +53,18 @@ function App() {
                 />
               }
             />
+            <Route
+              exact
+              path="/home"
+              element={
+                <TextForm
+                  showAlert={showAlert}
+                  heading="Try TextUtils - Word Counter, Character counter, Remove Exta Spaces"
+                  mode={mode}
+                />
+              }
+            />
+            <Route exact path="/about" element={<About mode={mode} />} />
           </Routes>
         </div>
       </Router>
