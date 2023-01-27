@@ -1,5 +1,6 @@
 {
   "name": "textutils",
+  "homepage": "https://vectorx009.github.io/Text-Analyzer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
